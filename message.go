@@ -12,7 +12,8 @@ import (
 	"sync"
 	"time"
 
-	uuid "github.com/satori/go.uuid"
+	// uuid "github.com/satori/go.uuid"
+	"github.com/gofrs/uuid"
 )
 
 // CeleryMessage is actual message to be sent to Redis
