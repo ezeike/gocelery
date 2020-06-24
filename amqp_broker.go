@@ -22,6 +22,7 @@ type AMQPExchange struct {
 
 // NewAMQPExchange creates new AMQPExchange
 func NewAMQPExchange(name string) *AMQPExchange {
+	fmt.Println("New Exchange")
 	return &AMQPExchange{
 		Name:       name,
 		Type:       "direct",
@@ -171,7 +172,7 @@ func (b *AMQPCeleryBroker) ConfigureAMQPServerRoute(route *Route) error {
 		route.Exchange,
 		"direct",
 		true,
-		true,
+		false,
 		false,
 		false,
 		nil,
